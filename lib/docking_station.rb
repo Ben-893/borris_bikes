@@ -12,7 +12,7 @@ class DockingStation
 
 def dock(docking_bike)
   if @docked_bike 
-    raise("no room for bike")
+    raise("Docking station full")
   else
     @docked_bike = docking_bike
   end
@@ -24,7 +24,7 @@ def release_bike
   @docked_bike = nil
   bike = Bike.new
 else
-  raise("no_bike") 
+  raise("No bike") 
     end
   end
 end

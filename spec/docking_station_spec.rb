@@ -22,11 +22,11 @@ it "releases working bike" do
   end
 
 it "raise error if no bikes are docked" do
-  expect { subject.release_bike; subject.release_bike }.to raise_error("no_bike")
+  expect { subject.release_bike; subject.release_bike }.to raise_error("No bike")
 end
 
-it "prevents a person from docking a bike if there isn't room." do
-  expect { subject.dock(Bike.new) }.to raise_error("no room for bike")
+it "raises an error when full." do
+  expect { subject.dock(Bike.new) }.to raise_error("Docking station full")
   end
 
 
