@@ -16,11 +16,11 @@ class DockingStation
 
 
 def release_bike
-  if @docked_bike.empty?
-  raise("no_bike") 
-else
+  if @docked_bike
   @docked_bike = ""
   bike = Bike.new
+else
+  raise("no_bike") 
     end
   end
 end
