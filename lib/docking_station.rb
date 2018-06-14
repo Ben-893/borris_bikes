@@ -10,9 +10,13 @@ class DockingStation
 
 
 
-  def dock(docking_bike)
+def dock(docking_bike)
+  if @docked_bike 
+    raise("no room for bike")
+  else
     @docked_bike = docking_bike
   end
+end
 
 
 def release_bike
