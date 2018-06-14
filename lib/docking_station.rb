@@ -17,7 +17,7 @@ class DockingStation
 
 def release_bike
   if @docked_bike
-  @docked_bike = ""
+  @docked_bike = nil
   bike = Bike.new
 else
   raise("no_bike") 
